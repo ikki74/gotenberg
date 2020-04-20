@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"os"
 
-	gfile "github.com/thecodingmachine/gotenberg/app/converter/file"
-	"github.com/thecodingmachine/gotenberg/app/converter/process"
-	"github.com/thecodingmachine/gotenberg/app/logger"
+	gfile "github.com/ikki74/gotenberg/app/converter/file"
+	"github.com/ikki74/gotenberg/app/converter/process"
+	"github.com/ikki74/gotenberg/app/logger"
 
-	"github.com/satori/go.uuid"
+	uuid "github.com/satori/go.uuid"
 )
 
 // Converter handles conversion into PDF of files coming from a request.

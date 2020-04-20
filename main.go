@@ -15,9 +15,9 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/thecodingmachine/gotenberg/app"
-	"github.com/thecodingmachine/gotenberg/app/config"
-	"github.com/thecodingmachine/gotenberg/app/logger"
+	"github.com/ikki74/gotenberg/app"
+	"github.com/ikki74/gotenberg/app/config"
+	"github.com/ikki74/gotenberg/app/logger"
 
 	"github.com/gorilla/mux"
 	"github.com/sirupsen/logrus"

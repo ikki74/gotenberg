@@ -7,11 +7,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/thecodingmachine/gotenberg/app/config"
-	"github.com/thecodingmachine/gotenberg/app/logger"
+	"github.com/ikki74/gotenberg/app/config"
+	"github.com/ikki74/gotenberg/app/logger"
 
 	"github.com/dustin/go-humanize"
-	"github.com/satori/go.uuid"
+	uuid "github.com/satori/go.uuid"
 )
 
 // File represents a file which has been created

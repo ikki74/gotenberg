@@ -5,9 +5,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/thecodingmachine/gotenberg/app/converter"
+	"github.com/ikki74/gotenberg/app/converter"
 
-	"github.com/satori/go.uuid"
+	uuid "github.com/satori/go.uuid"
 )
 
 func TestWithRequestID(t *testing.T) {
