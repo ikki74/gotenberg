@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"os"
 
-	gfile "github.com/ikki74/gotenberg/app/converter/file"
-	"github.com/ikki74/gotenberg/app/converter/process"
-	"github.com/ikki74/gotenberg/app/logger"
+	gfile "github.com/thecodingmachine/gotenberg/app/converter/file"
+	"github.com/thecodingmachine/gotenberg/app/converter/process"
+	"github.com/thecodingmachine/gotenberg/app/logger"
 )
 
 // Converter handles conversion into PDF of files coming from a request.

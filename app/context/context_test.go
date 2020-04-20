@@ -5,7 +5,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/ikki74/gotenberg/app/converter"
+	"github.com/thecodingmachine/gotenberg/app/converter"
 )
 
 func TestWithRequestID(t *testing.T) {
