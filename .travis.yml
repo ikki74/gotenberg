@@ -20,4 +20,4 @@ script:
   # Uploads coverage.
   - bash <(curl -s https://codecov.io/bash)
   # Let's push to Docker hub only if not in a pull request and the branch name matches the semver format.
-  - if [[ "$TRAVIS_PULL_REQUEST" = false && "$TRAVIS_BRANCH" =~ ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-(0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(\.(0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*)?(\+[0-9a-zA-Z-]+(\.[0-9a-zA-Z-]+)*)?$ ]]; then docker login -u $DOCKER_USER -p $DOCKER_PASS && docker push thecodingmachine/gotenberg:${TRAVIS_BRANCH}; fi
+  - if [[ "$TRAVIS_PULL_REQUEST" = false && "$TRAVIS_BRANCH" =~ ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-(0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(\.(0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*)?(\+[0-9a-zA-Z-]+(\.[0-9a-zA-Z-]+)*)?$ ]]; then docker login -u $DOCKER_USER -p $DOCKER_PASS && docker push sdemiguel/gotenberg:${TRAVIS_BRANCH}; fi
