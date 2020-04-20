@@ -17,10 +17,10 @@ before_install:
   - sudo mv ./orbit /usr/local/bin && chmod +x /usr/local/bin/orbit
 
 script:
-  - orbit run ci -p "Version,2.0.0"
-  - orbit run build -p "Version,2.0.0"
+  - orbit run ci -p "Version,v2.0.0"
+  - orbit run build -p "Version,v2.0.0"
   # Uploads coverage.
   - bash <(curl -s https://codecov.io/bash)
   # Let's push to Docker hub only if not in a pull request and the branch name matches the semver format.
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - if [[ "$TRAVIS_PULL_REQUEST" = false && "2.0.0" =~ ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-(0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(\.(0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*)?(\+[0-9a-zA-Z-]+(\.[0-9a-zA-Z-]+)*)?$ ]]; then docker push ikki74/gotenberg:2.0.0; fi
+  - if [[ "$TRAVIS_PULL_REQUEST" = false && "v2.0.0" =~ ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-(0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(\.(0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*)?(\+[0-9a-zA-Z-]+(\.[0-9a-zA-Z-]+)*)?$ ]]; then docker push ikki74/gotenberg:v2.0.0; fi
