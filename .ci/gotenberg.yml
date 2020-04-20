@@ -47,7 +47,7 @@ commands:
 
     - template: "unoconv --format pdf --output \"{{ .ResultFilePath }}\" \"{{ .FilePath }}\""
       interpreter: "/bin/sh -c"
-      timeout: 30
+      timeout: 60
       extensions:
         - ".doc"
         - ".docx"
