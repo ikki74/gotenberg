@@ -6,6 +6,8 @@ import (
 	"testing"
 
 	"github.com/thecodingmachine/gotenberg/app/converter"
+
+	"github.com/satori/go.uuid"
 )
 
 func TestWithRequestID(t *testing.T) {

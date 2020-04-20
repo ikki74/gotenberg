@@ -14,6 +14,7 @@ import (
 
 	"github.com/dustin/go-humanize"
 	"github.com/justinas/alice"
+	"github.com/satori/go.uuid"
 )
 
 // GetHandlersChain returns the handlers chaining

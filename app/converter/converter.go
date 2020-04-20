@@ -10,6 +10,8 @@ import (
 	gfile "github.com/thecodingmachine/gotenberg/app/converter/file"
 	"github.com/thecodingmachine/gotenberg/app/converter/process"
 	"github.com/thecodingmachine/gotenberg/app/logger"
+
+	"github.com/satori/go.uuid"
 )
 
 // Converter handles conversion into PDF of files coming from a request.

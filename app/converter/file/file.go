@@ -11,6 +11,7 @@ import (
 	"github.com/thecodingmachine/gotenberg/app/logger"
 
 	"github.com/dustin/go-humanize"
+	"github.com/satori/go.uuid"
 )
 
 // File represents a file which has been created
