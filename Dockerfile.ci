@@ -35,7 +35,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - &&\
 # | All Gotenberg related stuff.
 # |
 
-WORKDIR /go/src/github.com/thecodingmachine/gotenberg
+WORKDIR /go/src/github.com/ikki74/gotenberg
 
 # Installs lint dependencies.
 RUN go get -u gopkg.in/alecthomas/gometalinter.v2 &&\

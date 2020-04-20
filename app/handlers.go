@@ -7,14 +7,13 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/thecodingmachine/gotenberg/app/context"
-	"github.com/thecodingmachine/gotenberg/app/converter"
-	ghttp "github.com/thecodingmachine/gotenberg/app/http"
-	"github.com/thecodingmachine/gotenberg/app/logger"
+	"github.com/ikki74/gotenberg/app/context"
+	"github.com/ikki74/gotenberg/app/converter"
+	ghttp "github.com/ikki74/gotenberg/app/http"
+	"github.com/ikki74/gotenberg/app/logger"
 
 	"github.com/dustin/go-humanize"
 	"github.com/justinas/alice"
-	"github.com/satori/go.uuid"
 )
 
 // GetHandlersChain returns the handlers chaining

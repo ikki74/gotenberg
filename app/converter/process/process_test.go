@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/thecodingmachine/gotenberg/app/config"
-	gfile "github.com/thecodingmachine/gotenberg/app/converter/file"
+	"github.com/ikki74/gotenberg/app/config"
+	gfile "github.com/ikki74/gotenberg/app/converter/file"
 )
 
 func makeFile(workingDir string, fileName string) *gfile.File {

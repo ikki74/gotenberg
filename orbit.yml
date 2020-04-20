@@ -14,15 +14,15 @@ tasks:
   - use: ci
     short: Runs CI process inside a container
     run:
-      - docker build -t thecodingmachine/gotenberg:ci -f Dockerfile.ci .
-      - docker run --rm -e "VERSION={{ .Orbit.Version }}" -v "$(pwd)/.ci:/go/src/github.com/thecodingmachine/gotenberg/.ci" thecodingmachine/gotenberg:ci
+      - docker build -t ikki74/gotenberg:ci -f Dockerfile.ci .
+      - docker run --rm -e "VERSION={{ .Orbit.Version }}" -v "$(pwd)/.ci:/go/src/github.com/ikki74/gotenberg/.ci" ikki74/gotenberg:ci
 
   - use: build
     short: Builds the main Docker image
     run:
-      - docker build . -t thecodingmachine/gotenberg:{{ .Orbit.Version }}
+      - docker build . -t ikki74/gotenberg:{{ .Orbit.Version }}
 
   - use: up
     short: Starts the {{ .Orbit.Version }} version of the Gotenberg image
     run:
-      - docker run --rm -p 3000:3000/tcp thecodingmachine/gotenberg:{{ .Orbit.Version }}
+      - docker run --rm -p 3000:3000/tcp ikki74/gotenberg:{{ .Orbit.Version }}
