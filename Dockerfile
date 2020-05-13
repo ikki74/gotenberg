@@ -29,6 +29,12 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - &&\
     yarn global add markdown-pdf --prefix /usr/local
 
 # |--------------------------------------------------------------------------
+# | Japanese characters
+# |--------------------------------------------------------------------------
+
+RUN apt-get install -Vy ttf-wqy-zenhei fonts-arphic-ukai fonts-arphic-uming    
+
+# |--------------------------------------------------------------------------
 # | Gotenberg
 # |--------------------------------------------------------------------------
 # |
