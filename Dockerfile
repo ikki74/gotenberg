@@ -35,6 +35,18 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - &&\
 RUN apt-get install -Vy ttf-wqy-zenhei fonts-arphic-ukai fonts-arphic-uming    
 
 # |--------------------------------------------------------------------------
+# | Asian fonts (https://help.accusoft.com/PrizmDoc/v12.2/HTML/Installing_Asian_Fonts_on_Ubuntu_and_Debian.html)
+# |--------------------------------------------------------------------------
+
+RUN apt-get install language-pack-ja
+RUN apt-get install japan*
+RUN apt-get install language-pack-zh*
+RUN apt-get install chinese*
+RUN apt-get install language-pack-ko
+RUN apt-get install korean*
+RUN apt-get install fonts-arphic-ukai fonts-arphic-uming fonts-ipafont-mincho fonts-ipafont-gothic fonts-unfonts-core
+
+# |--------------------------------------------------------------------------
 # | Gotenberg
 # |--------------------------------------------------------------------------
 # |
