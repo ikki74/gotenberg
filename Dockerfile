@@ -38,7 +38,7 @@ RUN apt-get install -Vy ttf-wqy-zenhei fonts-arphic-ukai fonts-arphic-uming
 # | Asian fonts (https://gist.github.com/erain/0c13b452f7104e6a4b83)
 # |--------------------------------------------------------------------------
 
-RUN apt-get install fonts-droid-fallback ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming
+RUN apt-get install -Vy fonts-droid-fallback ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming
 
 # |--------------------------------------------------------------------------
 # | Gotenberg
