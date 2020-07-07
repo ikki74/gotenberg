@@ -9,14 +9,6 @@ LABEL authors="Julien Neuhart <j.neuhart@thecodingmachine.com>"
 # | Installs all required libraries.
 # |
 
-# |--------------------------------------------------------------------------
-# | Asian fonts (https://xjqian.wordpress.com/2007/11/13/chinese-fonts-in-debian/)
-# |--------------------------------------------------------------------------
-
-RUN apt-get install ttf-arphic-newsung
-RUN apt-get install ttf-arphic-ukai ttf-arphic-uming
-RUN apt-get install ttf-arphic-gbsn00lp ttf-arphic-bkai00mp ttf-arphic-bsmi00lp ttf-arphic-gkai00mp
-
 RUN echo "deb http://httpredir.debian.org/debian/ stretch main contrib non-free" > /etc/apt/sources.list &&\
     apt-get update &&\
     apt-get install -y xvfb wkhtmltopdf pdftk unoconv ttf-mscorefonts-installer &&\
@@ -41,6 +33,12 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - &&\
 # |--------------------------------------------------------------------------
 
 RUN apt-get install -Vy ttf-wqy-zenhei fonts-arphic-ukai fonts-arphic-uming    
+
+# |--------------------------------------------------------------------------
+# | Asian fonts (https://gist.github.com/erain/0c13b452f7104e6a4b83)
+# |--------------------------------------------------------------------------
+
+RUN apt-get install fonts-droid ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming
 
 # |--------------------------------------------------------------------------
 # | Gotenberg
