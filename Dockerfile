@@ -29,16 +29,11 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - &&\
     yarn global add markdown-pdf --prefix /usr/local
 
 # |--------------------------------------------------------------------------
-# | Japanese characters
-# |--------------------------------------------------------------------------
+# | Fonts
+# |--------------------------------------------------------------------------   
 
-RUN apt-get install -Vy ttf-wqy-zenhei fonts-arphic-ukai fonts-arphic-uming    
-
-# |--------------------------------------------------------------------------
-# | Asian fonts (https://gist.github.com/erain/0c13b452f7104e6a4b83)
-# |--------------------------------------------------------------------------
-
-RUN apt-get install -Vy fonts-droid-fallback ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming
+COPY .fonts/* /usr/share/fonts/
+RUN fc-cache -fv
 
 # |--------------------------------------------------------------------------
 # | Gotenberg
